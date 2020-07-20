@@ -25,7 +25,11 @@ function addSurvivalProbability(data) {
 
 const SurvivalCurve = ({ data }) => {
   return (
-    <LineChart width={500} height={300}>
+    <LineChart
+      width={500}
+      height={300}
+      margin={{ top: 40, bottom: 40, left: 40, right: 40 }}
+    >
       <XAxis dataKey="time" type="number" />
       <YAxis />
       <CartesianGrid strokeDasharray="3 3" />
