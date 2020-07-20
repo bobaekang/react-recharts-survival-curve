@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 
 function App() {
-  return <div>Hellow World</div>;
+  return <div>Hellow World</div>
 }
 
-export default App;
+export default App
