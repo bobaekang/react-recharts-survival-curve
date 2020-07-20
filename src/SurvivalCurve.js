@@ -8,6 +8,7 @@ import {
   Tooltip,
   Legend,
 } from 'recharts'
+import { schemeCategory10 } from 'd3-scale-chromatic'
 
 function addSurvivalProbability(data) {
   const newData = data
@@ -38,6 +39,7 @@ const SurvivalCurve = ({ data }) => {
           dot={false}
           name={patients[0].type}
           type="stepAfter"
+          stroke={schemeCategory10[i]}
         />
       ))}
     </LineChart>
