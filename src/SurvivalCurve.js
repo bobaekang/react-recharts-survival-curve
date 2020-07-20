@@ -24,6 +24,10 @@ function addSurvivalProbability(data) {
 }
 
 const SurvivalCurve = ({ data }) => {
+  const pTimes = data.flatMap((ps) => ps.flatMap((p) => parseFloat(p.time)))
+  const maxTime = Math.ceil(Math.max(0, ...pTimes))
+  const ticks = Array.from(Array(Math.ceil(maxTime / 10)), (_, e) => e * 10)
+
   return (
     <LineChart
       width={500}
@@ -38,6 +42,7 @@ const SurvivalCurve = ({ data }) => {
           position: 'insideBottom',
           offset: -5,
         }}
+        ticks={ticks}
       />
       <YAxis
         label={{
