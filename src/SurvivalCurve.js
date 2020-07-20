@@ -30,8 +30,22 @@ const SurvivalCurve = ({ data }) => {
       height={300}
       margin={{ top: 40, bottom: 40, left: 40, right: 40 }}
     >
-      <XAxis dataKey="time" type="number" />
-      <YAxis />
+      <XAxis
+        dataKey="time"
+        type="number"
+        label={{
+          value: 'Time (in months)',
+          position: 'insideBottom',
+          offset: -5,
+        }}
+      />
+      <YAxis
+        label={{
+          value: 'Survival Rate',
+          angle: -90,
+          position: 'insideLeft',
+        }}
+      />
       <CartesianGrid strokeDasharray="3 3" />
       <Tooltip />
       <Legend align="right" verticalAlign="top" />
