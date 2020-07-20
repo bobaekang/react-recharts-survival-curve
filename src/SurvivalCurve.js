@@ -30,7 +30,7 @@ const SurvivalCurve = ({ data }) => {
       <YAxis />
       <CartesianGrid strokeDasharray="3 3" />
       <Tooltip />
-      <Legend />
+      <Legend align="right" verticalAlign="top" />
       {addSurvivalProbability(data).map((patients, i) => (
         <Line
           key={i}
